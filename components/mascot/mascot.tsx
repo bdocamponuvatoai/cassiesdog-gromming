@@ -1,0 +1,117 @@
+export function Mascot({ headOnly = false }: { headOnly?: boolean }) {
+  return (
+    <svg
+      viewBox={headOnly ? "115 20 315 300" : "0 0 560 500"}
+      aria-hidden="true"
+      focusable="false"
+      className={headOnly ? "mascot mascot-head" : "mascot"}
+    >
+      <ellipse
+        cx="280"
+        cy="459"
+        rx="154"
+        ry="18"
+        fill="var(--cocoa)"
+        opacity=".09"
+      />
+      <g className="mascot-tail">
+        <path
+          className="fur"
+          d="M366 366 Q486 319 457 278 Q430 267 425 313 Q404 330 358 329"
+        />
+      </g>
+      <g className="mascot-body">
+        <path
+          className="fur"
+          d="M184 285 Q140 320 158 382 Q140 405 164 423 Q146 459 186 461 L225 460 Q250 448 243 422 L304 422 Q296 458 329 460 L376 458 Q406 449 385 419 Q410 402 391 379 Q408 314 360 287Z"
+        />
+        <path
+          d="M202 329 Q272 365 354 328 L352 374 Q273 397 205 375Z"
+          className="blue"
+        />
+        <path
+          d="M252 347 L299 350 L287 397 L250 385Z"
+          fill="var(--color-tint-blue)"
+        />
+      </g>
+      <g className="mascot-ears">
+        <path
+          className="fur"
+          d="M190 132 Q118 114 117 190 Q110 248 146 260 Q178 267 197 214Z"
+        />
+        <path
+          className="fur"
+          d="M366 132 Q438 114 439 190 Q446 248 410 260 Q378 267 359 214Z"
+        />
+      </g>
+      <g className="mascot-head">
+        <path
+          className="fur"
+          d="M183 126 Q174 94 206 90 Q210 53 244 70 Q272 35 297 65 Q329 48 342 78 Q375 72 380 105 Q413 118 395 149 Q422 182 398 208 Q419 242 389 259 Q380 299 344 295 Q320 328 286 308 Q253 329 228 307 Q192 321 178 288 Q142 288 146 253 Q120 229 145 202 Q125 171 151 153 Q146 124 183 126Z"
+        />
+      </g>
+      <g className="mascot-eyes">
+        <ellipse className="ink" cx="222" cy="187" rx="14" ry="20" />
+        <ellipse className="ink" cx="332" cy="187" rx="14" ry="20" />
+        <circle cx="226" cy="180" r="5" fill="var(--white)" />
+        <circle cx="336" cy="180" r="5" fill="var(--white)" />
+      </g>
+      <g className="mascot-face">
+        <ellipse
+          cx="190"
+          cy="225"
+          rx="19"
+          ry="11"
+          className="pink"
+          opacity=".55"
+        />
+        <ellipse
+          cx="366"
+          cy="225"
+          rx="19"
+          ry="11"
+          className="pink"
+          opacity=".55"
+        />
+        <path
+          className="ink"
+          d="M260 218 Q278 207 295 218 Q298 232 278 239 Q257 231 260 218Z"
+        />
+        <path
+          d="M246 245 Q278 282 313 245"
+          fill="none"
+          stroke="var(--cocoa)"
+          strokeWidth="7"
+          strokeLinecap="round"
+        />
+        <path
+          className="pink"
+          d="M268 263 L291 263 Q294 287 280 287 Q266 287 268 263"
+        />
+      </g>
+      <g className="mascot-wave-paw">
+        <path
+          className="fur"
+          d="M180 352 Q122 351 96 304 Q78 300 79 283 Q59 277 66 260 Q52 244 69 233 Q82 215 97 233 Q116 230 118 251 Q140 266 131 287 L197 307"
+        />
+        <ellipse cx="91" cy="262" rx="12" ry="14" className="pink" />
+      </g>
+      <g
+        className="mascot-bubble-crown"
+        fill="var(--color-tint-blue)"
+        stroke="var(--cocoa)"
+        strokeWidth="5"
+      >
+        <circle cx="231" cy="73" r="23" />
+        <circle cx="269" cy="52" r="30" />
+        <circle cx="310" cy="68" r="23" />
+        <circle cx="319" cy="28" r="10" />
+      </g>
+      <g fill="var(--white)">
+        <circle cx="260" cy="43" r="8" />
+        <circle cx="224" cy="68" r="6" />
+        <circle cx="305" cy="62" r="6" />
+      </g>
+    </svg>
+  );
+}
